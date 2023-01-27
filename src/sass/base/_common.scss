@@ -52,6 +52,9 @@
   &:focus {
     transform: scale(1.05);
   }
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
 }
 .main-content {
   padding-left: 270px;
