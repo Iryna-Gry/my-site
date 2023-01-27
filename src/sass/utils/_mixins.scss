@@ -1,0 +1,65 @@
+@mixin miniMobile {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin font-box($fw, $fs:16px, $lh:1.5, $ls: 0.04em) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin retina {
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+
+@keyframes scale-logo {
+  0% {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+
+  50% {
+    transform: rotate3d(0, 1, 0, 270deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+

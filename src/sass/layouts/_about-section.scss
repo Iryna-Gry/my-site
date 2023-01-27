@@ -1,0 +1,33 @@
+.about {
+  & .about-content {
+    max-width: 100%;
+    padding-left: 15px;
+    & .about-text {
+      max-width: 100%;
+      padding-left: 15px;
+      & h3 {
+        @include font-box(700, 24px, null, null);
+        margin-bottom: 15px;
+        color: var(--text-black-900);
+        & span {
+          color: var(--skin-color);
+        }
+      }
+      & p {
+        color: var(--text-black-700);
+      }
+    }
+    & .personal-info {
+      flex: 0 0 60%;
+      max-width: 60%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    & .skills {
+      flex: 0 0 40%;
+      max-width: 40%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
