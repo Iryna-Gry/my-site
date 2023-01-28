@@ -1,0 +1,39 @@
+.service-item {
+  padding-left: 15px;
+  padding-right: 15px;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  flex: 0 0 33.3%;
+  max-width: 33.3%;
+  &-inner {
+    background-color: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    padding: 30px 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    &:hover {
+      box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+    }
+    & .icon {
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 10px;
+      transition: all 0.3s ease;
+      & .fa {
+        @include font-box(null, 40px, 1.5, null);
+        color: var(--skin-color);
+      }
+    }
+    &:hover .icon {
+      background-color: var(--skin-color);
+    }
+    &:hover .icon .fa {
+      font-size: 25px;
+      color: white;
+    }
+  }
+}
