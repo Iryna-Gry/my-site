@@ -1,0 +1,121 @@
+.contact-title {
+  color: var(--skin-color);
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.contact-subtitle {
+  color: var(--text-black-900);
+  text-align: center;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+.contact-info-item {
+  padding-left: 15px;
+  padding-right: 15px;
+  flex: 0 0 25%;
+  max-width: 25%;
+  text-align: center;
+  margin-bottom: 60px;
+  @media (max-width: 991px) {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  @media (max-width: 767px) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  & .icon {
+    display: inline-block;
+    & .fa {
+      font-size: 25px;
+      color: var(--skin-color);
+    }
+  }
+  & h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    text-transform: capitalize;
+    margin: 15px 0 5px;
+  }
+  & a {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-black-700);
+    font-weight: 400;
+  }
+}
+.contact-form {
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  @media (max-width: 767px) {
+    max-width: 100%;
+  }
+}
+
+.form-control {
+  width: calc((100% - 15px) / 2);
+  display: block;
+  height: 50px;
+  border-radius: 25px;
+  background-color: var(--bg-black-100);
+  border: 1px solid var(--bg-black-50);
+  padding: 10px 25px;
+  font-size: 16px;
+  color: var(--text-black-700);
+
+  transition: all 0.3s ease;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+.form-message {
+  height: 50px;
+  border-radius: 25px;
+  background-color: var(--bg-black-100);
+  border: 1px solid var(--bg-black-50);
+  padding: 10px 25px;
+  font-size: 16px;
+  color: var(--text-black-700);
+  transition: all 0.3s ease;
+}
+textarea.form-message {
+  height: 140px;
+  resize: none;
+}
+.form-control:focus,
+.form-message:focus {
+  outline: 1px solid var(--skin-color);
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+.sender-info {
+  max-width: 100%;
+  display: flex;
+  gap: 15px;
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+.form-group {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+  & .btn {
+    height: 50px;
+    width: auto;
+    max-width: fit-content;
+    padding: 0 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+  }
+}

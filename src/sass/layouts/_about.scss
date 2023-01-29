@@ -23,6 +23,10 @@
       padding-left: 15px;
       padding-right: 15px;
       margin-top: 40px;
+      @media (max-width: 767px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
     }
     & .skills {
       flex: 0 0 40%;
@@ -30,6 +34,10 @@
       padding-left: 15px;
       padding-right: 15px;
       margin-top: 40px;
+      @media (max-width: 767px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
     }
     & .buttons {
       padding-left: 15px;
@@ -49,11 +57,24 @@
     padding: 10px 0;
     color: var(--text-black-900);
     border-bottom: 1px solid var(--bg-black-50);
+
     & span {
       @include font-box(400, null, null, null);
       color: var(--text-black-700);
       margin-left: 4px;
+      @media (max-width: 1199px) {
+        display: block;
+      }
+
       // display: inline-block;
+    }
+    & a {
+      color: var(--text-black-700);
+      text-decoration: underline 0.01px;
+      @media (max-width: 1199px) {
+        display: block;
+        margin-left: 0;
+      }
     }
   }
 }
@@ -98,6 +119,10 @@
   margin-top: 30px;
   padding-left: 15px;
   padding-right: 15px;
+  @media (max-width: 767px) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
   & h3.title {
     @include font-box(700, 24px, null, null);
     margin-bottom: 30px;

@@ -9,4 +9,18 @@
   --shadow-dark: 0 0 20px rgba(48, 46, 77, 0.15);
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
   --duration: 250ms;
+  --skin-color-red: #ec1839;
+  --skin-color-orange: #fa5b0f;
+  --skin-color-green: #37b182;
+  --skin-color-blue: #1854b4;
+  --skin-color-violet: #f021b2;
+}
+body.dark {
+  --bg-black-900: #151515;
+  --bg-black-100: #222222;
+  --bg-black-50: #393939;
+  --text-black-900: #ffffff;
+  --text-black-700: #e9e9e9;
+
+  --shadow-dark: 0 0 20px rgba(48, 46, 77, 0.15);
 }

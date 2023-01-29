@@ -19,7 +19,9 @@
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
-    "modern-normalize": "^1.1.0"
+    "modern-normalize": "^1.1.0",
+    "typed-js": "^0.2.3",
+    "typed.js": "^2.0.12"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
