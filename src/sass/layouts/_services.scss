@@ -2,7 +2,7 @@
   padding-left: 15px;
   padding-right: 15px;
   &:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   flex: 0 0 33.3%;
   max-width: 33.3%;
@@ -10,7 +10,7 @@
     background-color: var(--bg-black-100);
     border: 1px solid var(--bg-black-50);
     border-radius: 10px;
-    padding: 30px 15px;
+    padding: 15px 15px;
     text-align: center;
     transition: all 0.3s ease;
     &:hover {
@@ -20,12 +20,13 @@
       height: 60px;
       width: 60px;
       border-radius: 50%;
-      display: block;
+      @include flex;
       margin: 0 auto 10px;
-      transition: all 0.3s ease;
+      transition: background-color 0.3s ease;
       & .fa {
         @include font-box(null, 40px, 1.5, null);
         color: var(--skin-color);
+        transition: color 0.3s ease, font-size 0.3s ease;
       }
     }
     &:hover .icon {
@@ -36,4 +37,19 @@
       color: white;
     }
   }
+}
+.service-item-inner {
+  & h4 {
+    @include font-box(700, 18px, null, null);
+    margin-bottom: 10px;
+    color: var(--text-black-900);
+    text-transform: capitalize;
+  }
+  & p {
+    @include font-box(null, 16px, 1.5, null);
+    color: var(--text-black-700);
+  }
+}
+.service .container {
+  padding-bottom: 20px;
 }
