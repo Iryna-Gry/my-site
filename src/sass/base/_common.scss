@@ -31,6 +31,37 @@
   padding: 0 30px;
 
   opacity: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.3s ease;
+  @include pc {
+    left: 270px;
+  }
+}
+.section.active {
+  z-index: 2;
+  opacity: 1;
+  animation: slideSection 1s ease;
+}
+@keyframes slideSection {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.section.back-section {
+  z-index: 1;
+}
+.section.open {
+  left: 270px;
 }
 
 .row {
@@ -58,12 +89,7 @@
     margin-right: 15px;
   }
 }
-.main-content {
-  padding-left: 270px;
-  @media (max-width: 1199px) {
-    padding-left: 0;
-  }
-}
+
 .section-title {
   // flex: 0 0 100%;
   min-width: 100%;
