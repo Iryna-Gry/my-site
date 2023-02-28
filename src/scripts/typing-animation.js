@@ -4,7 +4,8 @@ const options = {
   strings: [
     '',
     'JavaScript Developer',
-    'Full-stack Developer',
+    'Front-end Developer',
+    'Future Full-stack Developer',
     'Switcher',
     'Mafia Game Player',
     'Language Learner',

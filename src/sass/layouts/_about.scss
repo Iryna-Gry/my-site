@@ -18,31 +18,30 @@
       }
     }
     & .personal-info {
-      flex: 0 0 60%;
-      max-width: 60%;
+      max-width: 100%;
       padding-left: 15px;
       padding-right: 15px;
       margin-top: 40px;
-      @media (max-width: 767px) {
-        flex: 0 0 100%;
-        max-width: 100%;
-      }
+      margin-bottom: 40px;
     }
     & .skills {
-      flex: 0 0 40%;
-      max-width: 40%;
+      max-width: 100%;
       padding-left: 15px;
       padding-right: 15px;
-      margin-top: 40px;
-      @media (max-width: 767px) {
-        flex: 0 0 100%;
-        max-width: 100%;
+      &_list {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
       }
     }
     & .buttons {
       padding-left: 15px;
       padding-right: 15px;
       margin-top: 40px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
@@ -79,36 +78,33 @@
   }
 }
 .skill-item {
-  padding-left: 15px;
-  padding-right: 15px;
-  flex: 0 0 100%;
   max-width: 100%;
-  margin-bottom: 25px;
+  text-align: center;
+  height: 180px;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+  @media (min-width: 768px) {
+    width: calc((100% - 60px) / 4);
+  }
+  @media (min-width: 1200px) {
+    width: calc((100% - 75px) / 7);
+  }
   & h5 {
     @include font-box(600, 16px, 1.9, null);
     color: var(--text-black-900);
     // text-transform: capitalize;
   }
-  & .progress {
-    background-color: var(--bg-black-50);
-    height: 7px;
-    border-radius: 4px;
+  & .image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    position: relative;
-    & .progress-in {
-      position: absolute;
-      left: 0;
-      top: 0;
+    height: 100%;
+    & img {
+      object-fit: contain;
       height: 100%;
-      border-radius: 4px;
-      background-color: var(--skin-color);
-    }
-    .skill-percent {
-      position: absolute;
-      right: 0;
-      top: -30px;
-      color: var(--text-black-900);
-      @include font-box(400, 16px, 1.9, null);
     }
   }
 }
@@ -184,4 +180,9 @@
     top: 0;
     background-color: var(--skin-color);
   }
+}
+.achievements-list,
+.achievements-title {
+  text-align: justify;
+  color: var(--text-black-700);
 }
